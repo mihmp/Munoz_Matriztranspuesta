@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+/*Agrego las librerias necesarias*/
 #define FILAS_MAXIMAS 10
 #define COLUMNAS_MAXIMAS 10
-
+/*Defino columnas y filas*/
 void llenarMatriz(int matriz[FILAS_MAXIMAS][COLUMNAS_MAXIMAS], int num_filas, int num_columnas) {
     srand(time(NULL));
     
@@ -14,7 +14,7 @@ void llenarMatriz(int matriz[FILAS_MAXIMAS][COLUMNAS_MAXIMAS], int num_filas, in
         }
     }
 }
-
+/*Marco cada matriz para el programa*/
 void imprimirMatriz(int matriz[FILAS_MAXIMAS][COLUMNAS_MAXIMAS], int num_filas, int num_columnas) {
     for (int i = 0; i < num_filas; i++) {
         for (int j = 0; j < num_columnas; j++) {
@@ -23,7 +23,7 @@ void imprimirMatriz(int matriz[FILAS_MAXIMAS][COLUMNAS_MAXIMAS], int num_filas, 
         printf("\n");
     }
 }
-
+/*Indico en las lineas que se genere la matriz transpuesta*/
 void calcularTranspuesta(int matriz[FILAS_MAXIMAS][COLUMNAS_MAXIMAS], int transpuesta[COLUMNAS_MAXIMAS][FILAS_MAXIMAS], int num_filas, int num_columnas) {
     for (int i = 0; i < num_filas; i++) {
         for (int j = 0; j < num_columnas; j++) {
@@ -37,9 +37,9 @@ int main() {
     int matriz[FILAS_MAXIMAS][COLUMNAS_MAXIMAS];
     int transpuesta[COLUMNAS_MAXIMAS][FILAS_MAXIMAS];
     
-    printf("Ingrese el número de filas de la matriz: ");
+    printf("Número de filas de la matriz: ");
     scanf("%d", &num_filas);
-    printf("Ingrese el número de columnas de la matriz: ");
+    printf("Número de columnas de la matriz: ");
     scanf("%d", &num_columnas);
     
     llenarMatriz(matriz, num_filas, num_columnas);
@@ -54,5 +54,4 @@ int main() {
     
     return 0;
 }
-
 
